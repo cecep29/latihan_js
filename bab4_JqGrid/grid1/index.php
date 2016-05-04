@@ -14,16 +14,12 @@
 		<script type="text/javascript" src="../../js/engineSearch.js"></script>
 		</head>
 <body>
-
-</body>
-</html>
-
-
-<table style="text-align: center;" id="datagrid"></table>
+<table id="datagrid"></table>
 <nav id="navGrid"></nav>
 
 <script languange="javascript">
 	jQuery("#datagrid").jqGrid({
+
 		url:'listgrid.php',
 		datatype: "json",
 		colNames: ['Nama', 'Alamat', 'Telp'],
@@ -37,6 +33,8 @@
 		pager: '#navGrid',
 		sortname: 'id_plg',
 		rownumbers: true,
+		sortorder: "desc",
+		height: 200,
 		caption:"Pelanggan",
 		editurl: 'edit_pelanggan.php',
 	});
@@ -47,3 +45,7 @@
 								{closeAfterAdd:true}, {}, {},{width:500}
 		);
 </script>
+</body>
+</html>
+
+
